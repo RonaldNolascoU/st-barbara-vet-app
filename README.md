@@ -8,9 +8,9 @@ Para abordar estas dificultades, estamos desarrollando un sistema de registro in
 
 * **Mejía Olmedo, Edwin Adonay** - :octocat: [edwinmejia-123](https://github.com/edwinmejia-123)
 * **Nolazco Umanzor, Ronald Alexander** - :octocat: [RonaldNolascoU](https://github.com/RonaldNolascoU)
-* **García Aparicio, Sara Daniela** - :octocat: [Karletty](https://github.com/danigarcia305)
-* **Molina Jovel, Daniel Adonay** - :octocat: [Karletty](https://github.com/AdonayNero)
-* **Artiga Mármol, Carlos Alfredo** - :octocat: [Victor-Rodriguez](https://github.com/AlfredoArthigha)
+* **García Aparicio, Sara Daniela** - :octocat: [danigarcia305](https://github.com/danigarcia305)
+* **Molina Jovel, Daniel Adonay** - :octocat: [AdonayNero](https://github.com/AdonayNero)
+* **Artiga Mármol, Carlos Alfredo** - :octocat: [AlfredoArthigha](https://github.com/AlfredoArthigha)
 * **Martínez García, Iván Alexander** - :octocat: [ivanboot](https://github.com/ivanboot)
 
 ## Documento de primer avance 📋
