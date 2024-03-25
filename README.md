@@ -6,21 +6,23 @@ Para abordar estas dificultades, estamos desarrollando un sistema de registro in
 
 ## Autores ✒️
 
-* **Nolasco Umanzor, Ronald Alexander** [RonaldNolascoU](https://github.com/RonaldNolascoU)
-* **Mejia Olmedo, Edwin Adonay** [edwinmejia-123](https://github.com/edwinmejia-123)
-* **Martínez García, Iván Alexander** [ivanboot](https://github.com/ivanboot)
-* **Molina Jovel, Daniel Adonay** [AdonayNero](https://github.com/AdonayNero)
-* **García Aparicio, Sara Daniela** [danigarcia305](https://github.com/danigarcia305)
-* **Artiga Mármol, Carlos Alfredo** [AlfredoArthigha](https://github.com/AlfredoArthigha)
+* **Mejía Olmedo, Edwin Adonay** - :octocat: [edwinmejia-123](https://github.com/edwinmejia-123)
+* **Nolazco Umanzor, Ronald Alexander** - :octocat: [RonaldNolascoU](https://github.com/RonaldNolascoU)
+* **García Aparicio, Sara Daniela** - :octocat: [Karletty](https://github.com/danigarcia305)
+* **Molina Jovel, Daniel Adonay** - :octocat: [Karletty](https://github.com/AdonayNero)
+* **Artiga Mármol, Carlos Alfredo** - :octocat: [Victor-Rodriguez](https://github.com/AlfredoArthigha)
+* **Martínez García, Iván Alexander** - :octocat: [ivanboot](https://github.com/ivanboot)
 
 ## Documento de primer avance 📋
-* [Primer avance](https://udbedu-my.sharepoint.com/:w:/g/personal/mg172002_alumno_udb_edu_sv/EVA9fVsalHNHpcBxNJlqTyQBqyHJEaLV0F5CVhHDuVeJSw?rtime=UvJaYXZM3Eg)
+* [Primer avance](https://drive.google.com/file/d/1x5uFewfeQoMA_UKi8ejVF92YXIxPzwDc/view?usp=sharing)
+  
 
-<!-- ## Planificación 📋
-* [Registro de actividades](https://github.com/users/RonaldNolascoU/projects/1/views/1) -->
+## Prototipado 📄
+* [Prototipado](https://www.figma.com/file/Tki9mI6u2NNfQFzp5ldFwh/PROTOTIPO%3A-SISTEMAS-DE-VETERINARIA?type=design&node-id=0-1&mode=design&t=ZZJ6VNHamoxMICPj-0)
 
-## Licencia 🔒
+  
+## Licencia 🔒 
 
-Este proyecto está bajo la Licencia CREATIVE COMMONS cc Attribution-NonCommercial-NoDerivatives International (CC BY-NC-ND) - [LICENSE](https://creativecommons.org/licenses/by-nc-nd/4.0/) para detalles
+Este proyecto está bajo la Licencia CREATIVE COMMONS cc Attribution-NoDerivatives International (CC BY-ND) - [LICENSE](https://creativecommons.org/licenses/by-nd/4.0/legalcode.en) para detalles
 
-![CC-BY-NC-ND](https://drive.google.com/uc?id=1pRC2FYrEamSntkeQdoNZs7GZNYqXOqBo)
+![CC-BY-ND](https://drive.google.com/uc?id=1O-Nsr9u9V7p5nYISysKUmiZePFJgbzwc)
