@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Inicio"
+        android:id="@+id/inicio"
+        android:icon="@drawable/home_svgrepo_com"/>
+    <item android:title="Doctores"
+        android:id="@+id/Doctores"
+        android:icon="@drawable/doctor_man_profile_svgrepo_com"/>
+    <item android:title="Pacientes"
+        android:id="@+id/Pacientes"
+        android:icon="@drawable/veterinary_care_svgrepo_com"/>
+    <item android:title="Citas"
+        android:id="@+id/Citas"
+        android:icon="@drawable/date_range_svgrepo_com"/>
+    <item android:title="Perfil"
+        android:id="@+id/Perfil"
+        android:icon="@drawable/baseline_account_circle_24"/>
+</menu>
