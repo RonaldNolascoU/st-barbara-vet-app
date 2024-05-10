@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/clinic"
+    android:insetLeft="37dp"
+    android:insetRight="37dp"
+    android:insetTop="37dp"
+    android:insetBottom="37dp"
+    />

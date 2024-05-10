@@ -1,18 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".Inicio">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Inicio Frame"
-        android:textSize="26dp"
-        android:layout_gravity="center"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#03A9F4"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        tools:context=".IndexActivity">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/saludo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido usuario\nVeterinaria st barbara"
+                android:textAlignment="textStart"
+                android:textSize="30dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#4E4D4D"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textAccesoRapido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Acceso Rapido"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+
+                >
+                <ImageButton
+                    android:id="@+id/imgbtnDoctor"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/doctor"/>
+                <ImageButton
+                    android:id="@+id/imgbtnCita"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/appointment"/>
+                <ImageButton
+                    android:id="@+id/imgbtnPaciente"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dog"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <CalendarView
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        </CalendarView>
+
+
+
+    </LinearLayout>
 
 </FrameLayout>
