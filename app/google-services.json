@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "803278521510",
+    "project_id": "veterinaria-santa-barbara",
+    "storage_bucket": "veterinaria-santa-barbara.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803278521510:android:f80d110f9ff107035ca067",
+        "android_client_info": {
+          "package_name": "com.dm.vsb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvSo4OO-XI0--_-7RwxJDS9C7P9SFbxZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
