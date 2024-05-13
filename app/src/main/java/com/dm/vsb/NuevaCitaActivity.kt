@@ -14,6 +14,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -22,6 +24,13 @@ class NuevaCitaActivity : AppCompatActivity() {
     private val calendar= Calendar.getInstance()
     lateinit var txtFecha: TextView
     lateinit var btnFecha: Button
+
+    private lateinit var paciente: String
+    private lateinit var doctor: String
+
+    private val db = FirebaseFirestore.getInstance()
+    private val collecionPacientes = db.collection("pacientes")
+    private val collecionDoctores = db.collection("doctores")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -33,9 +42,21 @@ class NuevaCitaActivity : AppCompatActivity() {
         btnFecha =findViewById(R.id.buttonFecha)
 
         val btnIngresar: Button = findViewById(R.id.buttonRegistrar)
+        val btnCancelar: Button = findViewById(R.id.buttonCancelar)
 
         btnIngresar.setOnClickListener {
-            Toast.makeText(this, "Nueva cita agendada", Toast.LENGTH_SHORT).show()
+
+            if(paciente.equals("Seleccionar...") || doctor.equals("Seleccionar...")){
+                Toast.makeText(this, "Debe seleccionar un paciente o doctor", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, "Nueva cita agendada", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+
+
+        }
+
+        btnCancelar.setOnClickListener {
             finish()
         }
 
@@ -48,8 +69,26 @@ class NuevaCitaActivity : AppCompatActivity() {
         var spinnerPaciente: Spinner = findViewById(R.id.spinnerPaciente)
         var spinnerDoctor: Spinner = findViewById(R.id.spinnerDoctor)
 
-        var pacientes = arrayOf("Pablo","Pepe","Patricio","Paola","Pamela")
-        var doctores = arrayOf("House","Tree","Grey","Donald","Diego")
+        var pacientes = ArrayList<String>()
+        var doctores = ArrayList<String>()
+
+        pacientes.add("Seleccionar...")
+        doctores.add("Seleccionar...")
+
+        collecionPacientes.get().addOnSuccessListener {
+            querySnapshot->
+            for (registro in querySnapshot){
+                pacientes.add(registro.getString("Nombre").toString())
+            }
+        }
+        collecionDoctores.get().addOnSuccessListener {
+            querySnapshot->
+            for(registro in querySnapshot){
+                doctores.add(registro.getString("Nombre").toString())
+            }
+        }
+
+
 
         var aaPacientes = ArrayAdapter(this,android.R.layout.simple_spinner_item,pacientes)
 
@@ -62,7 +101,7 @@ class NuevaCitaActivity : AppCompatActivity() {
             AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>, view: View, position:Int, id:Long){
                 //Codigo para almacenar los datos en variables al seleccionar
-
+                    paciente=pacientes[position]
                 //Mensaje que indica seleccion realizada
                 //Toast.makeText(this@NuevaCitaActivity,"Has seleccionado al paciente: " + pacientes[position], Toast.LENGTH_SHORT).show()
             }
@@ -76,7 +115,8 @@ class NuevaCitaActivity : AppCompatActivity() {
         spinnerDoctor.onItemSelectedListener=object:
             AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>, view: View, position:Int, id:Long){
-                Toast.makeText(this@NuevaCitaActivity,"Has seleccionado al doctor: " + doctores[position], Toast.LENGTH_SHORT).show()
+                doctor=doctores[position]
+                //Toast.makeText(this@NuevaCitaActivity,"Has seleccionado al doctor: " + doctores[position], Toast.LENGTH_SHORT).show()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

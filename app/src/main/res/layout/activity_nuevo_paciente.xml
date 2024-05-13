@@ -93,11 +93,25 @@
         </LinearLayout>
 
 
-        <Button
-            android:id="@+id/buttonRegistrar"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
             android:layout_gravity="center"
-            android:text="Registrar" />
+            android:gravity="center">
+            <Button
+                android:id="@+id/buttonCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Cancelar" />
+            <Button
+                android:id="@+id/buttonRegistrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Registrar" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
