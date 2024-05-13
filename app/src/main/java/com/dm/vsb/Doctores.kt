@@ -1,10 +1,15 @@
 package com.dm.vsb
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.firestore.FirebaseFirestore
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +26,11 @@ class Doctores : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private val db = FirebaseFirestore.getInstance()
+    private val coleccion = db.collection("doctores")
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var btnNuevoDoctor: FloatingActionButton
+    private lateinit var adapter: DoctorAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,7 +44,40 @@ class Doctores : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_doctores, container, false)
+
+        val view = inflater.inflate(R.layout.fragment_doctores, container, false)
+        recyclerView = view.findViewById(R.id.recyclerView)
+        btnNuevoDoctor = view.findViewById(R.id.fab_agregar)
+        recyclerView.layoutManager=LinearLayoutManager(context)
+        cargarDoctores()
+
+        btnNuevoDoctor.setOnClickListener {
+            val intent = Intent(context, NuevoDoctorActivity::class.java)
+            startActivity(intent)
+        }
+
+        return view
+    }
+
+    fun cargarDoctores(){
+
+        coleccion.get().addOnSuccessListener {
+            querySnapshot ->
+            val lista = mutableListOf<Doctor>()
+            for(elemento in querySnapshot){
+                val nombre = elemento.getString("Nombre").toString()
+                val apellido = elemento.getString("Apellido").toString()
+                val especialidad = elemento.getString("Especialidad").toString()
+                val email = elemento.getString("Email").toString()
+                val telefono = elemento.getString("Telefono").toString()
+
+                val modelo = Doctor(nombre,apellido,especialidad,telefono,email)
+                lista.add(modelo)
+            }
+            adapter=DoctorAdapter(lista)
+            recyclerView.adapter=adapter
+        }
+
     }
 
     companion object {
