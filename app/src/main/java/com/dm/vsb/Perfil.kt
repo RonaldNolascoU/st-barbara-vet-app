@@ -1,10 +1,13 @@
 package com.dm.vsb
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.google.firebase.auth.FirebaseAuth
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +37,26 @@ class Perfil : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_perfil, container, false)
+
+
+        val view = inflater.inflate(R.layout.fragment_perfil, container, false)
+
+        val buttonSignOut: Button = view.findViewById(R.id.buttonLogout)
+        buttonSignOut.setOnClickListener {
+            signOut()
+        }
+        return view
+    }
+
+    private fun signOut() {
+        // [START auth_sign_out]
+        FirebaseAuth.getInstance().signOut()
+        // [END auth_sign_out]
+
+        // Redirigir a la pantalla de inicio de sesión
+        val intent = Intent(requireContext(), login::class.java)
+        startActivity(intent)
+        activity?.finish()  // Cierra la actividad actual
     }
 
     companion object {
