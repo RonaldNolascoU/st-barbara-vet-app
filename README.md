@@ -24,7 +24,7 @@ Para abordar estas dificultades, estamos desarrollando un sistema de registro in
 * [Video de prototipo](https://drive.google.com/file/d/1w2fSn87dGc1fB_qO1fhXB4qbUV90Brf5/view?usp=sharing)
 
 ## Manuales 📝
-* [Manual técnico](https://docs.google.com/document/d/1CSHNGvHRo0vOVHBApxFi1RSNc3P2wPTr/edit?usp=sharing&ouid=117493035739023251008&rtpof=true&sd=true)
+* [Manual técnico](https://drive.google.com/file/d/1mi7Xi9GSHJCS3cA3Z-QHurVJFs2aQ1V9/view?usp=drive_link)
 * [Manual usuario](https://drive.google.com/file/d/1nPgw6B5r_DEiL5U-0JcAPOUCTxNWUKa1/view?usp=sharing)
 
 ## Licencia 🔒 
