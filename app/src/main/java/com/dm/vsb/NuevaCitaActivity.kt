@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -24,6 +25,9 @@ class NuevaCitaActivity : AppCompatActivity() {
     private val calendar= Calendar.getInstance()
     lateinit var txtFecha: TextView
     lateinit var btnFecha: Button
+    lateinit var motivo: EditText
+    lateinit var estado: EditText
+    lateinit var observaciones: EditText
 
     private lateinit var paciente: String
     private lateinit var doctor: String
@@ -31,6 +35,8 @@ class NuevaCitaActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
     private val collecionPacientes = db.collection("pacientes")
     private val collecionDoctores = db.collection("doctores")
+
+    private val citasCollection = db.collection("citas")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -40,6 +46,10 @@ class NuevaCitaActivity : AppCompatActivity() {
 
         txtFecha = findViewById(R.id.textFecha)
         btnFecha =findViewById(R.id.buttonFecha)
+        motivo = findViewById(R.id.editTextMotivo)
+        estado = findViewById(R.id.editTextEstado)
+        observaciones = findViewById(R.id.editTextEmail)
+
 
         val btnIngresar: Button = findViewById(R.id.buttonRegistrar)
         val btnCancelar: Button = findViewById(R.id.buttonCancelar)
@@ -49,8 +59,24 @@ class NuevaCitaActivity : AppCompatActivity() {
             if(paciente.equals("Seleccionar...") || doctor.equals("Seleccionar...")){
                 Toast.makeText(this, "Debe seleccionar un paciente o doctor", Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(this, "Nueva cita agendada", Toast.LENGTH_SHORT).show()
-                finish()
+                val cita = hashMapOf(
+                    "fecha" to txtFecha.text.toString(),
+                    "paciente" to paciente,
+                    "doctor" to doctor,
+                    "motivo" to motivo.text.toString(),
+                    "estado" to estado.text.toString(),
+                    "observaciones" to observaciones.text.toString()
+                )
+                citasCollection.add(cita)
+                    .addOnSuccessListener {
+                        Toast.makeText(this, "Nueva cita agendada", Toast.LENGTH_SHORT).show()
+                        finish()
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(this, "Error al agendar la cita: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
+//                Toast.makeText(this, "Nueva cita agendada", Toast.LENGTH_SHORT).show()
+//                finish()
             }
 
 
