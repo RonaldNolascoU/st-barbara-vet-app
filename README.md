@@ -20,8 +20,9 @@ Para abordar estas dificultades, estamos desarrollando un sistema de registro in
 ## Prototipado 📄
 * [Prototipado](https://www.figma.com/file/Tki9mI6u2NNfQFzp5ldFwh/PROTOTIPO%3A-SISTEMAS-DE-VETERINARIA?type=design&node-id=0-1&mode=design&t=ZZJ6VNHamoxMICPj-0)
 
-## Video de funcionamiento 📹
+## Videos de funcionamiento 📹
 * [Video de prototipo](https://drive.google.com/file/d/1w2fSn87dGc1fB_qO1fhXB4qbUV90Brf5/view?usp=sharing)
+* [Video de avance final](https://drive.google.com/file/d/1cyCsOaBXxZrqiEOMk2i1--rI5EfwY3MP/view?usp=sharing)
 
 ## Manuales 📝
 * [Manual técnico](https://drive.google.com/file/d/1mi7Xi9GSHJCS3cA3Z-QHurVJFs2aQ1V9/view?usp=drive_link)
