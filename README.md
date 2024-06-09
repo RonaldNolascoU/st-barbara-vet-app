@@ -25,7 +25,7 @@ Para abordar estas dificultades, estamos desarrollando un sistema de registro in
 
 ## Manuales 📝
 * [Manual técnico](https://docs.google.com/document/d/1CSHNGvHRo0vOVHBApxFi1RSNc3P2wPTr/edit?usp=sharing&ouid=117493035739023251008&rtpof=true&sd=true)
-* [Manual usuario](https://docs.google.com/document/d/1tFGRICiFkqvhyUdAgnuUcvWBLvLuoNcd/edit?usp=sharing&ouid=102198990071478007483&rtpof=true&sd=true)
+* [Manual usuario](https://drive.google.com/file/d/1nPgw6B5r_DEiL5U-0JcAPOUCTxNWUKa1/view?usp=sharing)
 
 ## Licencia 🔒 
 
